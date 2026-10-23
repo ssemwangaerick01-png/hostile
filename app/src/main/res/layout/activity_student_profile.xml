@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F7FF"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+
+        <!-- ===================================== -->
+        <!-- TOP BAR -->
+        <!-- ===================================== -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/backbutton"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:background="#FFFFFF"
+                android:contentDescription="Back"
+                android:padding="8dp"
+                android:src="@drawable/back2"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/profile_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="My Profile"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#1E3A8A" />
+
+            <View
+                android:layout_width="45dp"
+                android:layout_height="45dp" />
+
+        </LinearLayout>
+
+
+        <!-- ===================================== -->
+        <!-- PROFILE HEADER -->
+        <!-- ===================================== -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="#FFFFFF"
+            android:padding="20dp"
+            android:layout_marginTop="10dp">
+
+
+            <!-- Profile Image -->
+
+            <FrameLayout
+                android:layout_width="115dp"
+                android:layout_height="115dp">
+
+                <ImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/host"
+                    android:contentDescription="Profile picture"
+                    android:scaleType="centerCrop" />
+
+                <ImageButton
+                    android:id="@+id/edit_profile_image"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="bottom|end"
+                    android:src="@drawable/edit"
+                    android:contentDescription="Edit profile picture"
+                    android:padding="8dp"
+                    android:scaleType="fitCenter"/>
+
+            </FrameLayout>
+
+
+            <TextView
+                android:id="@+id/profiledisplayname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Student Name"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:textColor="#111827"
+                android:layout_marginTop="10dp" />
+
+
+            <TextView
+                android:id="@+id/profileaccounttype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Student Account"
+                android:textSize="14sp"
+                android:textColor="#64748B"
+                android:layout_marginTop="3dp" />
+
+
+            <TextView
+                android:id="@+id/profileverification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✓ Verified Student"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#16A34A"
+                android:layout_marginTop="6dp" />
+
+        </LinearLayout>
+
+
+        <!-- ===================================== -->
+        <!-- PERSONAL INFORMATION -->
+        <!-- ===================================== -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Personal Information"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:textColor="#111827"
+            android:layout_marginTop="24dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:layout_marginTop="10dp">
+
+
+            <!-- Full Name -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Full Name"
+                android:textSize="13sp"
+                android:textColor="#64748B" />
+
+            <EditText
+                android:id="@+id/profile_name"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="Enter full name"
+                android:inputType="textPersonName"
+                android:padding="12dp"
+                android:background="#F8FAFC"
+                android:textColor="#111827"
+                android:textColorHint="#94A3B8" />
+
+
+            <!-- Email -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email Address"
+                android:textSize="13sp"
+                android:textColor="#64748B"
+                android:layout_marginTop="14dp" />
+
+            <EditText
+                android:id="@+id/profile_email"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="Enter email address"
+                android:inputType="textEmailAddress"
+                android:padding="12dp"
+                android:background="#F8FAFC"
+                android:textColor="#111827"
+                android:textColorHint="#94A3B8" />
+
+
+            <!-- Phone -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone Number"
+                android:textSize="13sp"
+                android:textColor="#64748B"
+                android:layout_marginTop="14dp" />
+
+            <EditText
+                android:id="@+id/profile_phone"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="+256 7XX XXX XXX"
+                android:inputType="phone"
+                android:padding="12dp"
+                android:background="#F8FAFC"
+                android:textColor="#111827"
+                android:textColorHint="#94A3B8" />
+
+        </LinearLayout>
+
+
+        <!-- ===================================== -->
+        <!-- ACADEMIC INFORMATION -->
+        <!-- ===================================== -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Academic Information"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:textColor="#111827"
+            android:layout_marginTop="24dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:layout_marginTop="10dp">
+
+
+            <!-- University -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="University / Institution"
+                android:textSize="13sp"
+                android:textColor="#64748B" />
+
+            <EditText
+                android:id="@+id/profile_university"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="Enter university"
+                android:inputType="text"
+                android:padding="12dp"
+                android:background="#F8FAFC"
+                android:textColor="#111827"
+                android:textColorHint="#94A3B8" />
+
+
+            <!-- Student ID -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Student ID"
+                android:textSize="13sp"
+                android:textColor="#64748B"
+                android:layout_marginTop="14dp" />
+
+            <EditText
+                android:id="@+id/profilestudentid"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="Enter student ID"
+                android:inputType="text"
+                android:padding="12dp"
+                android:background="#F8FAFC"
+                android:textColor="#111827"
+                android:textColorHint="#94A3B8" />
+
+
+            <!-- Course -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Course"
+                android:textSize="13sp"
+                android:textColor="#64748B"
+                android:layout_marginTop="14dp" />
+
+            <EditText
+                android:id="@+id/profilecourse"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="Enter course"
+                android:inputType="text"
+                android:padding="12dp"
+                android:background="#F8FAFC"
+                android:textColor="#111827"
+                android:textColorHint="#94A3B8" />
+
+        </LinearLayout>
+
+
+        <!-- ===================================== -->
+        <!-- LOCATION -->
+        <!-- ===================================== -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:textColor="#111827"
+            android:layout_marginTop="24dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:layout_marginTop="10dp">
+
+
+            <!-- District -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="District"
+                android:textSize="13sp"
+                android:textColor="#64748B" />
+
+            <EditText
+                android:id="@+id/profiledistrict"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="e.g. Kampala"
+                android:inputType="text"
+                android:padding="12dp"
+                android:background="#F8FAFC"
+                android:textColor="#111827"
+                android:textColorHint="#94A3B8" />
+
+
+            <!-- Preferred Area -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Preferred Hostel Area"
+                android:textSize="13sp"
+                android:textColor="#64748B"
+                android:layout_marginTop="14dp" />
+
+            <EditText
+                android:id="@+id/profilepreferredarea"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="e.g. Kisaasi, Ntinda, Kyambogo"
+                android:inputType="text"
+                android:padding="12dp"
+                android:background="#F8FAFC"
+                android:textColor="#111827"
+                android:textColorHint="#94A3B8" />
+
+        </LinearLayout>
+
+
+        <!-- ===================================== -->
+        <!-- ACCOUNT OPTIONS -->
+        <!-- ===================================== -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Account"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:textColor="#111827"
+            android:layout_marginTop="24dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:layout_marginTop="10dp">
+
+
+            <Button
+                android:id="@+id/savedhostelsbutton"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:gravity="start|center_vertical"
+                android:text="♡  Saved Hostels"
+                android:textColor="#111827"
+                android:backgroundTint="#FFFFFF" />
+
+
+            <Button
+                android:id="@+id/bookingsbutton"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:gravity="start|center_vertical"
+                android:text="📅  My Bookings"
+                android:textColor="#111827"
+                android:backgroundTint="#FFFFFF" />
+
+
+            <Button
+                android:id="@+id/messages_button"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:gravity="start|center_vertical"
+                android:text="💬  Messages"
+                android:textColor="#111827"
+                android:backgroundTint="#FFFFFF" />
+
+
+            <Button
+                android:id="@+id/notificationsbutton"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:gravity="start|center_vertical"
+                android:text="🔔  Notifications"
+                android:textColor="#111827"
+                android:backgroundTint="#FFFFFF" />
+
+
+            <Button
+                android:id="@+id/securitybutton"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:gravity="start|center_vertical"
+                android:text="🔒  Password &amp; Security"
+                android:textColor="#111827"
+                android:backgroundTint="#FFFFFF" />
+
+        </LinearLayout>
+
+
+        <!-- ===================================== -->
+        <!-- SAVE CHANGES -->
+        <!-- ===================================== -->
+
+        <Button
+            android:id="@+id/save_profile"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Save Changes"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#1D4ED8"
+            android:layout_marginTop="25dp" />
+
+
+        <!-- ===================================== -->
+        <!-- LOGOUT -->
+        <!-- ===================================== -->
+
+        <Button
+            android:id="@+id/logout_button"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Log Out"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#DC2626"
+            android:backgroundTint="#FFFFFF"
+            android:layout_marginTop="10dp" />
+
+
+        <!-- ===================================== -->
+        <!-- DELETE ACCOUNT -->
+        <!-- ===================================== -->
+
+        <TextView
+            android:id="@+id/deleteaccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Delete Account"
+            android:textSize="14sp"
+            android:textColor="#DC2626"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="25dp" />
+
+    </LinearLayout>
+
+</ScrollView>

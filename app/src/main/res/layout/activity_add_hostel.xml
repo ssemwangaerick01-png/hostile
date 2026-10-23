@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F7FF"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <Button
+                android:id="@+id/back_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="‹"
+                android:textSize="30sp"
+                android:textColor="#1E3A8A"
+                android:backgroundTint="#FFFFFF" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+
+                <TextView
+                    android:id="@+id/page_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add New Hostel"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#1E3A8A" />
+
+                <TextView
+                    android:id="@+id/page_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Create a new hostel listing"
+                    android:textSize="13sp"
+                    android:textColor="#64748B"
+                    android:layout_marginTop="3dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Step Progress -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/step_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="STEP 1 OF 2"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#1D4ED8" />
+
+            <TextView
+                android:id="@+id/step_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Basic Information"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="#111827"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/step_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter the main details about your hostel."
+                android:textSize="13sp"
+                android:textColor="#64748B"
+                android:layout_marginTop="3dp" />
+
+        </LinearLayout>
+
+        <!-- Basic Information -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hostel Information"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#111827"
+            android:layout_marginTop="24dp" />
+
+        <!-- Hostel Name -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hostel Name"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#111827"
+            android:layout_marginTop="14dp" />
+
+        <EditText
+            android:id="@+id/hostel_name"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="e.g. Sunrise Hostel"
+            android:inputType="textCapSentences"
+            android:padding="14dp"
+            android:background="#FFFFFF"
+            android:textColor="#111827"
+            android:textColorHint="#94A3B8"
+            android:layout_marginTop="7dp" />
+
+        <!-- Location -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#111827"
+            android:layout_marginTop="15dp" />
+
+        <EditText
+            android:id="@+id/hostel_location"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="e.g. Kisaasi, Kampala"
+            android:inputType="textCapSentences"
+            android:padding="14dp"
+            android:background="#FFFFFF"
+            android:textColor="#111827"
+            android:textColorHint="#94A3B8"
+            android:layout_marginTop="7dp" />
+
+        <!-- Description -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#111827"
+            android:layout_marginTop="15dp" />
+
+        <EditText
+            android:id="@+id/hostel_description"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:hint="Describe the hostel, environment and nearby facilities..."
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:padding="14dp"
+            android:background="#FFFFFF"
+            android:textColor="#111827"
+            android:textColorHint="#94A3B8"
+            android:layout_marginTop="7dp" />
+
+        <!-- Hostel Type -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hostel Type"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#111827"
+            android:layout_marginTop="15dp" />
+
+        <Spinner
+            android:id="@+id/hostel_type"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="#FFFFFF"
+            android:layout_marginTop="7dp" />
+
+        <!-- Price -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price Per Semester"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#111827"
+            android:layout_marginTop="15dp" />
+
+        <EditText
+            android:id="@+id/hostel_price"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="e.g. 800000"
+            android:inputType="number"
+            android:padding="14dp"
+            android:background="#FFFFFF"
+            android:textColor="#111827"
+            android:textColorHint="#94A3B8"
+            android:layout_marginTop="7dp" />
+
+        <!-- Available Rooms -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Available Rooms"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#111827"
+            android:layout_marginTop="15dp" />
+
+        <EditText
+            android:id="@+id/available_rooms"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Number of available rooms"
+            android:inputType="number"
+            android:padding="14dp"
+            android:background="#FFFFFF"
+            android:textColor="#111827"
+            android:textColorHint="#94A3B8"
+            android:layout_marginTop="7dp" />
+
+        <!-- Continue -->
+
+        <Button
+            android:id="@+id/next_btn"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Continue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#1D4ED8"
+            android:layout_marginTop="28dp" />
+
+        <Button
+            android:id="@+id/cancel_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Cancel"
+            android:textSize="15sp"
+            android:textColor="#1D4ED8"
+            android:backgroundTint="#FFFFFF"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp" />
+
+    </LinearLayout>
+
+</ScrollView>

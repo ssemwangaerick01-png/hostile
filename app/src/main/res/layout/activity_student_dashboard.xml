@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F0F7FF">
+
+    <!-- ========================= -->
+    <!-- TOP HEADER -->
+    <!-- ========================= -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:background="#FFFFFF">
+
+        <!-- Greeting and Location -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/greeting_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hello, Student 👋"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#111827" />
+
+            <TextView
+                android:id="@+id/location_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📍 Kampala, Uganda"
+                android:textSize="14sp"
+                android:textColor="#64748B"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+
+
+        <!-- Notifications -->
+
+        <ImageButton
+            android:id="@+id/notification_button"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/send"
+            android:contentDescription="Notifications"
+            android:background="#FFFFFF"
+            android:padding="10dp"
+            android:scaleType="fitCenter"/>
+
+
+        <!-- Profile -->
+
+        <ImageView
+            android:id="@+id/profile_icon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/host"
+            android:contentDescription="Profile"
+            android:layout_marginStart="8dp" />
+
+    </LinearLayout>
+
+
+    <!-- ========================= -->
+    <!-- SEARCH -->
+    <!-- ========================= -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#FFFFFF"
+        android:layout_margin="16dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🔍"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/dashboard_search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="Search hostels, areas or universities"
+            android:inputType="text"
+            android:padding="10dp"
+            android:background="#FFFFFF"
+            android:textColor="#111827"
+            android:textColorHint="#94A3B8"
+            android:singleLine="true" />
+
+        <ImageButton
+            android:id="@+id/search_button"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/search"
+            android:contentDescription="Search"
+            android:background="#1D4ED8"
+            android:padding="10dp" />
+
+    </LinearLayout>
+
+
+    <!-- ========================= -->
+    <!-- MAIN SCROLLABLE CONTENT -->
+    <!-- ========================= -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="20dp">
+
+
+            <!-- ========================= -->
+            <!-- QUICK FILTERS -->
+            <!-- ========================= -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Find Your Hostel"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#111827"
+                android:layout_marginTop="4dp" />
+
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <Button
+                        android:id="@+id/nearby_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:text="📍 Nearby"
+                        android:textColor="#FFFFFF"
+                        android:backgroundTint="#1D4ED8" />
+
+
+                    <Button
+                        android:id="@+id/cheap_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="8dp"
+                        android:text="💰 Affordable"
+                        android:textColor="#1D4ED8"
+                        android:backgroundTint="#FFFFFF" />
+
+
+                    <Button
+                        android:id="@+id/top_rated_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="8dp"
+                        android:text="⭐ Top Rated"
+                        android:textColor="#1D4ED8"
+                        android:backgroundTint="#FFFFFF" />
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+
+            <!-- ========================= -->
+            <!-- RECOMMENDED HEADER -->
+            <!-- ========================= -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="24dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Recommended Hostels"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#111827" />
+
+                <TextView
+                    android:id="@+id/see_all_recommended"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="See All"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#1D4ED8" />
+
+            </LinearLayout>
+
+
+            <!-- ========================= -->
+            <!-- MAIN HOSTEL CARD -->
+            <!-- ========================= -->
+
+            <LinearLayout
+                android:id="@+id/hostel_card_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:padding="12dp"
+                android:layout_marginTop="12dp"
+                android:clickable="true"
+                android:focusable="true">
+
+
+                <!-- Hostel Image and Save -->
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp">
+
+                    <ImageView
+                        android:id="@+id/hostel_image_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/room2"
+                        android:contentDescription="Hostel image" />
+
+
+                    <ImageButton
+                        android:id="@+id/save_hostel_1"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="top|end"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/heart"
+                        android:contentDescription="Save hostel"
+                        android:background="#FFFFFF"
+                        android:padding="10dp" />
+
+                </FrameLayout>
+
+
+                <!-- Hostel Name -->
+
+                <TextView
+                    android:id="@+id/hostel_name_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sunrise Hostel"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    android:textColor="#111827"
+                    android:layout_marginTop="10dp" />
+
+
+                <!-- Location -->
+
+                <TextView
+                    android:id="@+id/hostel_location_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📍 Kisaasi, Kampala"
+                    android:textSize="14sp"
+                    android:textColor="#64748B"
+                    android:layout_marginTop="4dp" />
+
+
+                <!-- Rating and Distance -->
+
+                <TextView
+                    android:id="@+id/hostel_rating_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⭐ 4.7  •  0.8 km away"
+                    android:textSize="14sp"
+                    android:textColor="#64748B"
+                    android:layout_marginTop="6dp" />
+
+
+                <!-- Price -->
+
+                <TextView
+                    android:id="@+id/hostel_price_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="UGX 800,000 / semester"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="#1D4ED8"
+                    android:layout_marginTop="7dp" />
+
+
+                <!-- Availability -->
+
+                <TextView
+                    android:id="@+id/hostel_availability_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🛏 5 rooms available"
+                    android:textSize="14sp"
+                    android:textColor="#16A34A"
+                    android:layout_marginTop="5dp" />
+
+
+                <!-- View Details -->
+
+                <Button
+                    android:id="@+id/view_details_button_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="View Details"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#1D4ED8"
+                    android:layout_marginTop="12dp" />
+
+            </LinearLayout>
+
+
+            <!-- ========================= -->
+            <!-- NEARBY HOSTELS -->
+            <!-- ========================= -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="25dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Nearby Hostels"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#111827" />
+
+                <TextView
+                    android:id="@+id/see_all_nearby"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="See All"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#1D4ED8" />
+
+            </LinearLayout>
+
+
+            <!-- Nearby Hostel Cards -->
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <!-- Nearby Card 1 -->
+
+                    <LinearLayout
+                        android:id="@+id/nearby_card_1"
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="#FFFFFF"
+                        android:padding="10dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+
+                        <ImageView
+                            android:id="@+id/nearby_image_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/room2"
+                            android:contentDescription="Nearby hostel" />
+
+
+                        <TextView
+                            android:id="@+id/nearby_name_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Green View Hostel"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="#111827"
+                            android:layout_marginTop="8dp" />
+
+
+                        <TextView
+                            android:id="@+id/nearby_location_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="📍 Ntinda"
+                            android:textSize="13sp"
+                            android:textColor="#64748B" />
+
+
+                        <TextView
+                            android:id="@+id/nearby_price_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="UGX 650,000"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="#1D4ED8"
+                            android:layout_marginTop="4dp" />
+
+                    </LinearLayout>
+
+
+                    <!-- Space -->
+
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="1dp" />
+
+
+                    <!-- Nearby Card 2 -->
+
+                    <LinearLayout
+                        android:id="@+id/nearby_card_2"
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="#FFFFFF"
+                        android:padding="10dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+
+                        <ImageView
+                            android:id="@+id/nearby_image_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/room2"
+                            android:contentDescription="Nearby hostel" />
+
+
+                        <TextView
+                            android:id="@+id/nearby_name_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Campus View Hostel"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="#111827"
+                            android:layout_marginTop="8dp" />
+
+
+                        <TextView
+                            android:id="@+id/nearby_location_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="📍 Kyambogo"
+                            android:textSize="13sp"
+                            android:textColor="#64748B" />
+
+
+                        <TextView
+                            android:id="@+id/nearby_price_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="UGX 700,000"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="#1D4ED8"
+                            android:layout_marginTop="4dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+
+            <!-- ========================= -->
+            <!-- QUICK ACTIONS -->
+            <!-- ========================= -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quick Actions"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#111827"
+                android:layout_marginTop="25dp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
+
+
+                <Button
+                    android:id="@+id/messages_button"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_weight="1"
+                    android:text="💬 Messages"
+                    android:textColor="#1D4ED8"
+                    android:backgroundTint="#FFFFFF" />
+
+
+                <Button
+                    android:id="@+id/reviews_button"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:text="⭐ Reviews"
+                    android:textColor="#1D4ED8"
+                    android:backgroundTint="#FFFFFF" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <!-- ========================= -->
+    <!-- BOTTOM NAVIGATION -->
+    <!-- ========================= -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="#FFFFFF">
+
+
+        <Button
+            android:id="@+id/nav_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="🏠&#10;Home"
+            android:textColor="#1D4ED8"
+            android:backgroundTint="#FFFFFF" />
+
+
+        <Button
+            android:id="@+id/nav_saved"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="♡&#10;Saved"
+            android:textColor="#64748B"
+            android:backgroundTint="#FFFFFF" />
+
+
+        <Button
+            android:id="@+id/nav_bookings"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="📅&#10;Bookings"
+            android:textColor="#64748B"
+            android:backgroundTint="#FFFFFF" />
+
+
+        <Button
+            android:id="@+id/nav_profile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="👤&#10;Profile"
+            android:textColor="#64748B"
+            android:backgroundTint="#FFFFFF" />
+
+    </LinearLayout>
+
+</LinearLayout>

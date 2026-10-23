@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8FAFC">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#1E3A8A" />
+
+        <Button
+            android:id="@+id/profile_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="25dp"
+            android:text="Profile Information" />
+
+        <Button
+            android:id="@+id/password_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Change Password" />
+
+        <Button
+            android:id="@+id/notifications_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Notifications" />
+
+        <Button
+            android:id="@+id/language_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Language" />
+
+        <Button
+            android:id="@+id/logout_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:text="Logout"
+            android:textColor="#DC2626" />
+
+    </LinearLayout>
+
+</ScrollView>

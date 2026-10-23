@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F0F7FF">
+
+    <!-- =============================== -->
+    <!-- HEADER -->
+    <!-- =============================== -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="#FFFFFF">
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/back2"
+            android:background="#FFFFFF"
+            android:padding="10dp"
+            android:contentDescription="Back"
+            android:scaleType="fitCenter"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="10dp">
+
+            <TextView
+                android:id="@+id/saved_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saved Hostels"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                android:textColor="#1E3A8A" />
+
+            <TextView
+                android:id="@+id/saved_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your favourite hostels"
+                android:textSize="13sp"
+                android:textColor="#64748B"
+                android:layout_marginTop="2dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!-- =============================== -->
+    <!-- SEARCH -->
+    <!-- =============================== -->
+
+    <EditText
+        android:id="@+id/saved_search"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_margin="16dp"
+        android:hint="Search saved hostels"
+        android:inputType="text"
+        android:padding="14dp"
+        android:background="#FFFFFF"
+        android:textColor="#111827"
+        android:textColorHint="#94A3B8" />
+
+
+    <!-- =============================== -->
+    <!-- CONTENT -->
+    <!-- =============================== -->
+
+    <ScrollView
+        android:id="@+id/saved_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/saved_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="20dp">
+
+
+            <!-- =============================== -->
+            <!-- SECTION TITLE -->
+            <!-- =============================== -->
+
+            <TextView
+                android:id="@+id/favourites_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Favourites"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:textColor="#111827" />
+
+
+            <!-- =============================== -->
+            <!-- HOSTEL CARD 1 -->
+            <!-- =============================== -->
+
+            <LinearLayout
+                android:id="@+id/saved_hostel_card_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:padding="12dp"
+                android:layout_marginTop="12dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp">
+
+                    <ImageView
+                        android:id="@+id/saved_image_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/room1"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="Sunrise Hostel image" />
+
+                    <ImageButton
+                        android:id="@+id/remove_saved_1"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/heart"
+                        android:background="#FFFFFF"
+                        android:padding="10dp"
+                        android:contentDescription="Remove from saved" />
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/saved_name_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sunrise Hostel"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    android:textColor="#111827"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:id="@+id/saved_location_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📍 Kisaasi, Kampala"
+                    android:textSize="14sp"
+                    android:textColor="#64748B"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:id="@+id/saved_rating_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="★ 4.7  •  0.8 km away"
+                    android:textSize="14sp"
+                    android:textColor="#64748B"
+                    android:layout_marginTop="5dp" />
+
+                <TextView
+                    android:id="@+id/saved_price_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="UGX 800,000 / semester"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#1D4ED8"
+                    android:layout_marginTop="6dp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp">
+
+                    <Button
+                        android:id="@+id/view_saved_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="View Details"
+                        android:textColor="#FFFFFF"
+                        android:backgroundTint="#1D4ED8" />
+
+                    <Button
+                        android:id="@+id/book_saved_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:text="Book Now"
+                        android:textColor="#1D4ED8"
+                        android:backgroundTint="#FFFFFF" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!-- =============================== -->
+            <!-- HOSTEL CARD 2 -->
+            <!-- =============================== -->
+
+            <LinearLayout
+                android:id="@+id/saved_hostel_card_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:padding="12dp"
+                android:layout_marginTop="16dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp">
+
+                    <ImageView
+                        android:id="@+id/saved_image_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/room2"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="Green View Hostel image" />
+
+                    <ImageButton
+                        android:id="@+id/remove_saved_2"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/heart"
+                        android:background="#FFFFFF"
+                        android:padding="10dp"
+                        android:contentDescription="Remove from saved" />
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/saved_name_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Green View Hostel"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    android:textColor="#111827"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:id="@+id/saved_location_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📍 Ntinda, Kampala"
+                    android:textSize="14sp"
+                    android:textColor="#64748B"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:id="@+id/saved_rating_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="★ 4.5  •  1.2 km away"
+                    android:textSize="14sp"
+                    android:textColor="#64748B"
+                    android:layout_marginTop="5dp" />
+
+                <TextView
+                    android:id="@+id/saved_price_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="UGX 650,000 / semester"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#1D4ED8"
+                    android:layout_marginTop="6dp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp">
+
+                    <Button
+                        android:id="@+id/view_saved_2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="View Details"
+                        android:textColor="#FFFFFF"
+                        android:backgroundTint="#1D4ED8" />
+
+                    <Button
+                        android:id="@+id/book_saved_2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:text="Book Now"
+                        android:textColor="#1D4ED8"
+                        android:backgroundTint="#FFFFFF" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!-- =============================== -->
+            <!-- EMPTY STATE -->
+            <!-- =============================== -->
+
+            <LinearLayout
+                android:id="@+id/no_saved_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="35dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/no_saved_image"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/host"
+                    android:contentDescription="No saved hostels" />
+
+                <TextView
+                    android:id="@+id/no_saved_hostels"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No Saved Hostels"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#111827"
+                    android:layout_marginTop="15dp" />
+
+                <TextView
+                    android:id="@+id/no_saved_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Save hostels you like and find them here later."
+                    android:textSize="14sp"
+                    android:textColor="#64748B"
+                    android:gravity="center"
+                    android:layout_marginTop="8dp" />
+
+                <Button
+                    android:id="@+id/find_hostel_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="Find a Hostel"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#1D4ED8"
+                    android:layout_marginTop="18dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <!-- =============================== -->
+    <!-- BOTTOM NAVIGATION -->
+    <!-- =============================== -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="#FFFFFF">
+
+        <Button
+            android:id="@+id/nav_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Home"
+            android:textColor="#64748B"
+            android:backgroundTint="#FFFFFF" />
+
+        <Button
+            android:id="@+id/nav_saved"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Saved"
+            android:textColor="#1D4ED8"
+            android:backgroundTint="#FFFFFF" />
+
+        <Button
+            android:id="@+id/nav_bookings"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Bookings"
+            android:textColor="#64748B"
+            android:backgroundTint="#FFFFFF" />
+
+        <Button
+            android:id="@+id/nav_profile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Profile"
+            android:textColor="#64748B"
+            android:backgroundTint="#FFFFFF" />
+
+    </LinearLayout>
+
+</LinearLayout>

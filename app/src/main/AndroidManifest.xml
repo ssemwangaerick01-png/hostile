@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HOSTELFINDER">
+
+        <!-- Splash Screen / Launcher -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Onboarding -->
+        <activity android:name=".Onboarding1Activity" android:exported="false" />
+        <activity android:name=".Onboarding2Activity" android:exported="false" />
+        <activity android:name=".Onboarding3Activity" android:exported="false" />
+
+        <!-- Welcome -->
+        <activity android:name=".WelcomeActivity" android:exported="false" />
+
+        <!-- Authentication -->
+        <activity android:name=".LoginActivity" android:exported="false" />
+        <activity android:name=".ChooseAccountActivity" android:exported="false" />
+        <activity android:name=".StudentRegisterActivity" android:exported="false" />
+        <activity android:name=".OwnerRegisterActivity" android:exported="false" />
+        <activity android:name=".ForgotPasswordActivity" android:exported="false" />
+        <activity android:name=".ResetPasswordActivity" android:exported="false" />
+
+        <!-- Student Flow -->
+        <activity android:name=".StudentDashboardActivity" android:exported="false" />
+        <activity android:name=".StudentProfileActivity" android:exported="false" />
+        <activity android:name=".SearchActivity" android:exported="false" />
+        <activity android:name=".SavedHostelsActivity" android:exported="false" />
+        <activity android:name=".BookingActivity" android:exported="false" />
+        <activity android:name=".HostelDetailsActivity" android:exported="false" />
+        <activity android:name=".HostelListActivity" android:exported="false" />
+        <activity android:name=".MessagesActivity" android:exported="false" />
+        <activity android:name=".MyBookingsActivity" android:exported="false" />
+        <activity android:name=".ReviewsActivity" android:exported="false" />
+        <activity android:name=".NotificationsActivity" android:exported="false" />
+
+        <!-- Owner Flow -->
+        <activity android:name=".OwnerDashboardActivity" android:exported="false" />
+        <activity android:name=".OwnerProfileActivity" android:exported="false" />
+        <activity android:name=".OwnerNotificationsActivity" android:exported="false" />
+        <activity android:name=".OwnerMessageActivity" android:exported="false" />
+        <activity android:name=".OwnerAnalyticsActivity" android:exported="false" />
+        <activity android:name=".OwnerSettingsActivity" android:exported="false" />
+        <activity android:name=".AddHostelActivity" android:exported="false" />
+        <activity android:name=".AddHostelStepsActivity" android:exported="false" />
+        <activity android:name=".ManageListingsActivity" android:exported="false" />
+        <activity android:name=".BookingRequestsActivity" android:exported="false" />
+
+        <activity android:name=".MainActivity" android:exported="false" />
+
+    </application>
+
+</manifest>

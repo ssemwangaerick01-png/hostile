@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F8FC"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- ================= HEADER ================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="#FFFFFF"
+            android:elevation="4dp">
+
+            <ImageButton
+                android:id="@+id/back_button"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/back2"
+                android:contentDescription="Back"
+                android:scaleType="fitCenter"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="8dp">
+
+                <TextView
+                    android:id="@+id/reviews_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reviews and Ratings"
+                    android:textSize="21sp"
+                    android:textStyle="bold"
+                    android:textColor="#172B4D" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Share your experience"
+                    android:textSize="12sp"
+                    android:textColor="#718096"
+                    android:layout_marginTop="2dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- ================= MAIN CONTENT ================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+
+            <!-- ================= HOSTEL CARD ================= -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp"
+                android:background="@drawable/review_card_background"
+                android:elevation="2dp">
+
+                <TextView
+                    android:id="@+id/review_hostel_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sunrise Hostel"
+                    android:textSize="21sp"
+                    android:textStyle="bold"
+                    android:textColor="#111827" />
+
+                <TextView
+                    android:id="@+id/review_hostel_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📍 Kampala, Uganda"
+                    android:textSize="13sp"
+                    android:textColor="#718096"
+                    android:layout_marginTop="5dp" />
+
+
+                <!-- Rating Summary -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="18dp">
+
+                    <TextView
+                        android:id="@+id/rating_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4.5"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        android:textColor="#172B4D" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="12dp">
+
+                        <RatingBar
+                            android:id="@+id/rating_summary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:numStars="5"
+                            android:stepSize="0.5"
+                            android:rating="4.5"
+                            android:scaleX="0.8"
+                            android:scaleY="0.8"
+                            android:isIndicator="true" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="128 reviews"
+                            android:textSize="12sp"
+                            android:textColor="#718096"
+                            android:layout_marginTop="-2dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!-- ================= WRITE REVIEW ================= -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Write a Review"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:textColor="#172B4D"
+                android:layout_marginTop="26dp"
+                android:layout_marginBottom="10dp" />
+
+
+            <!-- Rating -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="How would you rate this hostel?"
+                android:textSize="14sp"
+                android:textColor="#64748B" />
+
+            <RatingBar
+                android:id="@+id/rating_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:stepSize="1"
+                android:rating="5"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="14dp" />
+
+
+            <!-- Review Input -->
+            <EditText
+                android:id="@+id/review_input"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:hint="Tell us about your experience..."
+                android:gravity="top|start"
+                android:padding="15dp"
+                android:textSize="14sp"
+                android:textColor="#1E293B"
+                android:textColorHint="#94A3B8"
+                android:background="@drawable/review_input_background"
+                android:inputType="textMultiLine"
+                android:layout_marginBottom="14dp" />
+
+
+            <!-- Submit Button -->
+            <Button
+                android:id="@+id/submit_review"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="Submit Review"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/filter_background"
+                android:textAllCaps="false" />
+
+
+            <!-- ================= PREVIOUS REVIEWS ================= -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:id="@+id/previous_reviews_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Previous Reviews"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    android:textColor="#172B4D" />
+
+                <TextView
+                    android:id="@+id/view_all_reviews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View All"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="#2563EB" />
+
+            </LinearLayout>
+
+
+            <!-- Example Review Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:background="@drawable/review_card_background"
+                android:layout_marginBottom="12dp">
+
+                <!-- User -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:gravity="center"
+                        android:text="E"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:textColor="#2563EB"
+                        android:background="@drawable/avatar_background" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Edward"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="#172B4D" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2 days ago"
+                            android:textSize="11sp"
+                            android:textColor="#94A3B8"
+                            android:layout_marginTop="2dp" />
+
+                    </LinearLayout>
+
+                    <RatingBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:rating="5"
+                        android:isIndicator="true"
+                        android:scaleX="0.65"
+                        android:scaleY="0.65" />
+
+                </LinearLayout>
+
+
+                <!-- Review Text -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="The hostel is clean, secure and the rooms are spacious. The staff are also very friendly."
+                    android:textSize="14sp"
+                    android:textColor="#475569"
+                    android:lineSpacingExtra="2dp"
+                    android:layout_marginTop="12dp" />
+
+            </LinearLayout>
+
+
+            <!-- Second Example Review -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:background="@drawable/review_card_background"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:gravity="center"
+                        android:text="M"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:textColor="#2563EB"
+                        android:background="@drawable/avatar_background" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Michael"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="#172B4D" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1 week ago"
+                            android:textSize="11sp"
+                            android:textColor="#94A3B8"
+                            android:layout_marginTop="2dp" />
+
+                    </LinearLayout>
+
+                    <RatingBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:rating="4"
+                        android:isIndicator="true"
+                        android:scaleX="0.65"
+                        android:scaleY="0.65" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Good location and affordable prices. I would recommend it to other students."
+                    android:textSize="14sp"
+                    android:textColor="#475569"
+                    android:lineSpacingExtra="2dp"
+                    android:layout_marginTop="12dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
